@@ -3,9 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\Author;
-use App\Models\Person;
-use App\Models\Product;
+use \App\Models\Person;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,6 +15,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(AuthorsTableSeeder::class);
+        Person::factory(10)->create();
     }
 }
